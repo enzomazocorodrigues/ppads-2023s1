@@ -28,6 +28,10 @@
 * Enzo Mazoco Rodrigues
 
 * David Nunes Vieira
+  
+* Moises Santana
+
+* Victor Andrade
 
 # Descrição do projeto
 
