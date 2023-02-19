@@ -27,6 +27,8 @@
 
 * Enzo Mazoco Rodrigues
 
+* David Nunes Vieira
+
 # Descrição do projeto
 
 *&lt;Descrição do projeto&gt;*
