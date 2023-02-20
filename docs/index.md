@@ -17,6 +17,7 @@
 - [Diagrama de casos de uso](#diagrama-de-casos-de-uso)
 - [Descrição dos casos de uso](#descrição-dos-casos-de-uso)
 - [Protótipos de tela](#protótipos-de-tela)
+- 
 - [Modelo de domínio](#modelo-de-domínio)
 - [Decisões de arquitetura](#decisões-de-arquitetura)
 - [Diagrama de implantação](#diagrama-de-implantação)
@@ -47,7 +48,7 @@
 
 # Protótipos de tela
 
-*&lt;Protótipos de tela&gt;*
+[Prototipo app](https://user-images.githubusercontent.com/101683741/219985012-99142425-fa12-4bd8-bfd1-33e6a6bbdd3b.png)
 
 # Modelo de domínio
 
