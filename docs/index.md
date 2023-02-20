@@ -40,11 +40,20 @@
 
 # Diagrama de casos de uso
 
-*&lt;Diagrama de casos de uso&gt;*
+*https://github.com/enzomazocorodrigues/ppads-2023s1/blob/master/docs/Diagrama%20de%20casos%20de%20uso.png*
 
 # Descrição dos casos de uso
 
-*&lt;Descrição dos casos de uso&gt;*
+* Registrar Falta
+1°: O caso de uso se inicia quando o professor selecionar qual turma ele irá registrar as faltas. Assim exibirá todos os alunos daquela turma. 
+2°: Logo em seguida o professor deverá se identificar selecionando seu nome, qual disciplina está atuando naquela falta e qual é o período (início do dia ou depois do intervalo).
+3°: Após se identificar selecionando as opções ele poderá registrar as faltas dos alunos de acordo com a chamada oral.
+4°: Ao finalizar o registro de chamada exibirá uma tela de concluído com uma opção de gerar relatório.
+
+Gerar Relatório
+1°: Esse caso de uso começa após registrar as faltas e o professor clicar em relatório.
+2°: Após clicar para gerar relatório ele já receberá o relatório com a última atualização. 
+
 
 # Protótipos de tela
 
