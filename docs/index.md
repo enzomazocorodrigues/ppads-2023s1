@@ -115,7 +115,14 @@ Alta
 
 # Protótipos de tela
 
-*&lt;Protótipos de tela&gt;*
+## Tela de Inicio 
+![Tela inicio](https://user-images.githubusercontent.com/101683741/219990510-205acf83-1c58-47b9-9a77-b4c1dd46d872.png)
+
+## Tela de Controle de Presença 
+![Tela controle de presença](https://user-images.githubusercontent.com/101683741/219990540-2d2019d9-6d87-493f-b406-38a47e93109e.png)
+
+## Tela de Gerar o Relatório
+![Tela relatório](https://user-images.githubusercontent.com/101683741/219990575-71a1979d-6cc1-4b51-9de9-14ae854fd6b3.png)
 
 # Modelo de domínio
 
