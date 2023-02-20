@@ -3,7 +3,7 @@
 
 
 <font size="+12"><center>
-*&lt;Nome do Projeto&gt;*
+*Sistema de presença para Escola do Infinito*
 </center></font>
 
 >*Observação 1: A estrutura inicial deste documento é só um exemplo. O seu grupo deverá alterar esta estrutura de acordo com o que está sendo solicitado na disciplina.*
@@ -22,20 +22,16 @@
 - [Diagrama de implantação](#diagrama-de-implantação)
 - [Referências](#referências)
 
-
 # Autores
 
 * Enzo Mazoco Rodrigues
-
 * David Nunes Vieira
-  
 * Moises Santana
-
 * Victor Andrade
 
 # Descrição do projeto
 
-*&lt;Descrição do projeto&gt;*
+*O Sistema de Presença da DEMV Systems auxilia os professores do Fundamental I da Escola do Infinito no registro de falta e controle de frequência dos alunos, mantendo também os responsáveis inteirados na situação dos seus filhos via e-mail.*
 
 # Diagrama de casos de uso
 
