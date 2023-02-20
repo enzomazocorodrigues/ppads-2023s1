@@ -35,7 +35,7 @@ Sistema de presença para Escola do Infinito
 
 # Diagrama de casos de uso
 
-*&lt;Diagrama de casos de uso&gt;*
+![Diagrama de casos de uso](Diagrama%20de%20casos%20de%20uso.png)
 
 # Descrição dos casos de uso
 
