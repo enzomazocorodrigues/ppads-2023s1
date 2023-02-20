@@ -23,7 +23,6 @@ Sistema de presença para Escola do Infinito
     - [Pré-condições](#pré-condições)
     - [Fluxo principal](#fluxo-principal)
     - [Pós-condições](#pós-condições)
-    - [Regras de negócio](#regras-de-negócio)
   - [Gerar Relatório](#gerar-relatório)
     - [Objetivos](#objetivos-1)
     - [Atores](#atores-1)
@@ -31,7 +30,6 @@ Sistema de presença para Escola do Infinito
     - [Pré-condições](#pré-condições-1)
     - [Fluxo principal](#fluxo-principal-1)
     - [Pós-condições](#pós-condições-1)
-    - [Regras de negócio](#regras-de-negócio-1)
 - [Protótipos de tela](#protótipos-de-tela)
 - [Modelo de domínio](#modelo-de-domínio)
 - [Decisões de arquitetura](#decisões-de-arquitetura)
@@ -59,6 +57,8 @@ Sistema de presença para Escola do Infinito
 
 ### Objetivos
 
+Registrar as faltas dos alunos para se realizar o controle de frequência em cada disciplina.
+
 ### Atores
 
 - Professor
@@ -73,21 +73,24 @@ Alta
 
 ### Fluxo principal
 
-1. O caso de uso se inicia quando o professor selecionar qual turma ele irá registrar as faltas. Assim exibirá todos os alunos daquela turma. 
-2. Logo em seguida o professor deverá se identificar selecionando seu nome, qual disciplina está atuando naquela falta e qual é o período (início do dia ou depois do intervalo).
-3. Após se identificar selecionando as opções ele poderá registrar as faltas dos alunos de acordo com a chamada oral.
-4. Ao finalizar o registro de chamada exibirá uma tela de concluído com uma opção de gerar relatório.
+1. Professor acessa a página de `Registrar falta`,
+2. Professor selecionar qual turma ele irá registrar as faltas,
+3. Sistema exibe todos os alunos daquela turma,
+4. Professor deverá se identificar selecionando seu nome, qual disciplina está atuando naquela falta e qual é o período (início do dia ou depois do intervalo),
+5. Professor seleciona os alunos que não estão presentes, de acordo com a chamada oral,
+6. Professor clica em `Registar faltas` para salva-las na base de dados,
+7. Ao finalizar, sistema exibirá uma tela de concluído com uma opção de gerar relatório.
 
 ### Pós-condições
 
-- As faltas dos alunos devem ser adicionadas na base de dados.
-
-### Regras de negócio
+- As faltas dos alunos devem ser adicionadas a base de dados.
 
 ## Gerar Relatório
 
 ### Objetivos
 
+Gerar relatório de faltas a partir de datas, disciplinas, turmas ou professores para avaliar a situação de frequência dos alunos.
+
 ### Atores
 
 - Professor
@@ -99,15 +102,16 @@ Alta
 ### Pré-condições
 
 - As aulas, professores, disciplinas já devem estar cadastradas na base de dados.
+- Registro de faltas realizados preveamente.
 
 ### Fluxo principal
 
-1. Esse caso de uso começa após registrar as faltas e o professor clicar em relatório.
-2. Após clicar para gerar relatório ele já receberá o relatório com a última atualização.
+1. Professor acessa a página para `Gerar relatório`,
+2. Escolhe o tipo de agrupamento das faltas (*datas, disciplinas, turmas ou professores*),
+3. Clica em `Gerar relatório`,
+4. Sistema retorna relatório de faltas agrupado pelo tipo escolhido.
 
 ### Pós-condições
-
-### Regras de negócio
 
 # Protótipos de tela
 
