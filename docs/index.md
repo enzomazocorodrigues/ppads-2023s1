@@ -3,7 +3,7 @@
 
 
 <font size="+12"><center>
-*Sistema de presença para Escola do Infinito*
+Sistema de presença para Escola do Infinito
 </center></font>
 
 >*Observação 1: A estrutura inicial deste documento é só um exemplo. O seu grupo deverá alterar esta estrutura de acordo com o que está sendo solicitado na disciplina.*
