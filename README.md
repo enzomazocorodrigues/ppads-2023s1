@@ -15,4 +15,4 @@ Os arquivos da documentação deste projeto estão na pasta [/docs](/docs), e o 
 
 # Releases
 
-Deverá ser publicado um release ao término de cada entrega do projeto.
+🏷️ [Documentação - Parte I (v0.0.1)](https://github.com/enzomazocorodrigues/ppads-2023s1/releases/tag/v0.0.1)
