@@ -36,6 +36,7 @@ Sistema de presença para Escola do Infinito
   - [Tela de Gerar o Relatório](#tela-de-gerar-o-relatório)
 - [Modelo de domínio](#modelo-de-domínio)
 - [Decisões de arquitetura](#decisões-de-arquitetura)
+  - [Diagramas de Sequência](#diagramas-de-sequência)
 - [Diagrama de implantação](#diagrama-de-implantação)
 - [Referências](#referências)
 
@@ -140,7 +141,7 @@ Alta
 
 # Diagrama de implantação
 
-*&lt;Diagrama de implantação&gt;*
+![Diagrama de implantação](https://raw.githubusercontent.com/enzomazocorodrigues/ppads-2023s1/master/docs/Diagrama%20de%20Integra%C3%A7%C3%A3o.png)
 
 # Referências
 
