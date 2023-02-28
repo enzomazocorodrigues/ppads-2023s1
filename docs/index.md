@@ -129,7 +129,7 @@ Alta
 
 # Modelo de domínio
 
-*&lt;Modelo de domínio&gt;*
+![Modelo de domínio](https://raw.githubusercontent.com/enzomazocorodrigues/ppads-2023s1/master/docs/Modelo%20de%20dom%C3%ADnio.png)
 
 # Decisões de arquitetura
 
