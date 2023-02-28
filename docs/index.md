@@ -133,7 +133,10 @@ Alta
 
 # Decisões de arquitetura
 
-*&lt;Decisões de arquitetura&gt;*
+## Diagramas de Sequência
+![Diagrama de Sequência(Registrar Faltas)](https://raw.githubusercontent.com/enzomazocorodrigues/ppads-2023s1/master/docs/Diagrama%20sequencia(Registrar%20Falta).png)
+
+![Diagrama de Sequência(Gerar Relatório)](https://raw.githubusercontent.com/enzomazocorodrigues/ppads-2023s1/master/docs/Diagrama%20sequencia(Gerar%20Relat%C3%B3rio).png)
 
 # Diagrama de implantação
 
