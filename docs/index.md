@@ -37,6 +37,8 @@ Sistema de presença para Escola do Infinito
 - [Modelo de domínio](#modelo-de-domínio)
 - [Decisões de arquitetura](#decisões-de-arquitetura)
   - [Diagramas de Sequência](#diagramas-de-sequência)
+    - [Caso de Uso: Registrar faltas](#caso-de-uso-registrar-faltas)
+    - [Caso de Uso: Gerar relatório](#caso-de-uso-gerar-relatório)
 - [Diagrama de implantação](#diagrama-de-implantação)
 - [Referências](#referências)
 
@@ -135,12 +137,16 @@ Alta
 # Decisões de arquitetura
 
 ## Diagramas de Sequência
-![Diagrama de Sequência(Registrar Faltas)](https://raw.githubusercontent.com/enzomazocorodrigues/ppads-2023s1/master/docs/Diagrama%20sequencia(Registrar%20Falta).png)
+
+### Caso de Uso: Registrar faltas
+
+![Diagrama de Sequência(Registrar faltas)](https://raw.githubusercontent.com/enzomazocorodrigues/ppads-2023s1/master/docs/Diagrama%20sequencia(Registrar%20Falta).png)
+
+### Caso de Uso: Gerar relatório
 
 ![Diagrama de Sequência(Gerar Relatório)](https://raw.githubusercontent.com/enzomazocorodrigues/ppads-2023s1/master/docs/Diagrama%20sequencia(Gerar%20Relat%C3%B3rio).png)
 
 # Diagrama de implantação
-
 ![Diagrama de implantação](https://raw.githubusercontent.com/enzomazocorodrigues/ppads-2023s1/master/docs/Diagrama%20de%20Integra%C3%A7%C3%A3o.png)
 
 # Referências
