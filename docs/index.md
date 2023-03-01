@@ -137,7 +137,7 @@ Alta
 # Decisões de arquitetura
 
 ## Definição da arquitetura
-A camada visual do nosso projeto será desenvolvida em React.js, é um
+  A camada visual do nosso projeto será desenvolvida em React.js, é um
 framework muito usual com diversas bibliotecas que pode nos ajudar a
 desenvolver de maneira rápida e eficaz.
 A camada de controle será desenvolvida com node.js, ele é capaz de
@@ -145,6 +145,9 @@ interpretar códigos em Java Script para realizar o envio de instruções.
 O banco de dados será o PostgreSQL. E a aplicação será hospedada na
 AWS.
 E como serviço de mensagens, usaremos Twilio.
+
+## Diagrama de Componentes
+![Diagrama de Componentes](https://raw.githubusercontent.com/enzomazocorodrigues/ppads-2023s1/master/docs/Diagrama%20de%20Componentes.png)
 
 ## Diagramas de Sequência
 
