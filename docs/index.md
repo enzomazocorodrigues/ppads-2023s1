@@ -147,7 +147,7 @@ Alta
 ![Diagrama de Sequência(Gerar Relatório)](https://raw.githubusercontent.com/enzomazocorodrigues/ppads-2023s1/master/docs/Diagrama%20sequencia(Gerar%20Relat%C3%B3rio).png)
 
 # Diagrama de implantação
-![Diagrama de implantação](https://raw.githubusercontent.com/enzomazocorodrigues/ppads-2023s1/master/docs/Diagrama%20de%20Integra%C3%A7%C3%A3o.png)
+![Diagrama de implantação](https://raw.githubusercontent.com/enzomazocorodrigues/ppads-2023s1/master/docs/Diagrama%20de%20Implantacao.png)
 
 # Referências
 
