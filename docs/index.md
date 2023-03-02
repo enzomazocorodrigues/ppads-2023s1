@@ -16,29 +16,17 @@ Sistema de presença para Escola do Infinito
 - [Descrição do projeto](#descrição-do-projeto)
 - [Diagrama de casos de uso](#diagrama-de-casos-de-uso)
 - [Descrição dos casos de uso](#descrição-dos-casos-de-uso)
-  - [Registrar Falta](#registrar-falta)
-    - [Objetivos](#objetivos)
-    - [Atores](#atores)
-    - [Prioridade](#prioridade)
-    - [Pré-condições](#pré-condições)
-    - [Fluxo principal](#fluxo-principal)
-    - [Pós-condições](#pós-condições)
-  - [Gerar Relatório](#gerar-relatório)
-    - [Objetivos](#objetivos-1)
-    - [Atores](#atores-1)
-    - [Prioridade](#prioridade-1)
-    - [Pré-condições](#pré-condições-1)
-    - [Fluxo principal](#fluxo-principal-1)
-    - [Pós-condições](#pós-condições-1)
 - [Protótipos de tela](#protótipos-de-tela)
   - [Tela de Inicio](#tela-de-inicio)
   - [Tela de Controle de Presença](#tela-de-controle-de-presença)
   - [Tela de Gerar o Relatório](#tela-de-gerar-o-relatório)
 - [Modelo de domínio](#modelo-de-domínio)
 - [Decisões de arquitetura](#decisões-de-arquitetura)
+  - [Definição da arquitetura](#definição-da-arquitetura)
+  - [Diagrama de Componentes](#diagrama-de-componentes)
   - [Diagramas de Sequência](#diagramas-de-sequência)
-    - [Caso de Uso: Registrar faltas](#caso-de-uso-registrar-faltas)
-    - [Caso de Uso: Gerar relatório](#caso-de-uso-gerar-relatório)
+    - [Caso de Uso: Fazer chamada](#caso-de-uso-fazer-chamada)
+    - [Caso de Uso: Gerar relatório de faltas](#caso-de-uso-gerar-relatório-de-faltas)
 - [Diagrama de implantação](#diagrama-de-implantação)
 - [Referências](#referências)
 
@@ -55,11 +43,11 @@ Sistema de presença para Escola do Infinito
 
 # Diagrama de casos de uso
 
-![Diagrama de casos de uso](Diagrama%20de%20casos%20de%20uso.png)
+![Diagrama de casos de uso](./Diagrama%20de%20casos%20de%20uso.png)
 
 # Descrição dos casos de uso
 
-## Registrar Falta
+<!-- ## Registrar Falta
 
 ### Objetivos
 
@@ -89,9 +77,11 @@ Alta
 
 ### Pós-condições
 
-- As faltas dos alunos devem ser adicionadas a base de dados.
+- As faltas dos alunos devem ser adicionadas a base de dados. -->
 
-## Gerar Relatório
+![Especificação de caso de uso (Fazer chamada)](./Especifica%C3%A7%C3%A3o%20de%20caso%20de%20uso%20(Fazer%20chamada).png)
+
+<!-- ## Gerar Relatório
 
 ### Objetivos
 
@@ -115,52 +105,56 @@ Alta
 1. Professor acessa a página para `Gerar relatório`,
 2. Escolhe o tipo de agrupamento das faltas (*datas, disciplinas, turmas ou professores*),
 3. Clica em `Gerar relatório`,
-4. Sistema retorna relatório de faltas agrupado pelo tipo escolhido.
+4. Sistema retorna relatório de faltas agrupado pelo tipo escolhido. 
 
-### Pós-condições
+### Pós-condições -->
+
+![Especificação de caso de uso (Gerar relatório de faltas)](./Especifica%C3%A7%C3%A3o%20de%20caso%20de%20uso%20(Gerar%20relat%C3%B3rio).png)
+
+![Especificação de caso de uso (Notificar responsável - Parte 1)](./Especifica%C3%A7%C3%A3o%20de%20caso%20de%20uso%20(Notificar%20respons%C3%A1vel%20-%20Parte%201).png)
+![Especificação de caso de uso (Notificar responsável - Parte 2)](./Especifica%C3%A7%C3%A3o%20de%20caso%20de%20uso%20(Notificar%20respons%C3%A1vel%20-%20Parte%202).png.png)
 
 # Protótipos de tela
 
 ## Tela de Inicio 
-![Tela inicio](https://user-images.githubusercontent.com/101683741/219990510-205acf83-1c58-47b9-9a77-b4c1dd46d872.png)
+![Tela inicio](./Prot%C3%B3tipos/Tela%20inicio.png)
 
 ## Tela de Controle de Presença 
-![Tela controle de presença](https://user-images.githubusercontent.com/101683741/219990540-2d2019d9-6d87-493f-b406-38a47e93109e.png)
+![Tela controle de presença](./Prot%C3%B3tipos/Tela%20controle%20de%20presen%C3%A7a.png)
 
 ## Tela de Gerar o Relatório
-![Tela relatório](https://user-images.githubusercontent.com/101683741/219990575-71a1979d-6cc1-4b51-9de9-14ae854fd6b3.png)
+![Tela relatório](./Prot%C3%B3tipos/Tela%20relat%C3%B3rio.png)
 
 # Modelo de domínio
 
-![Modelo de domínio](https://raw.githubusercontent.com/enzomazocorodrigues/ppads-2023s1/master/docs/Modelo%20de%20dom%C3%ADnio.png)
+![Modelo de domínio](./Modelo%20de%20Dom%C3%ADnio.png)
 
 # Decisões de arquitetura
 
 ## Definição da arquitetura
-  A camada visual do nosso projeto será desenvolvida em React.js, é um
+A camada visual do nosso projeto será desenvolvida em React.js, é um
 framework muito usual com diversas bibliotecas que pode nos ajudar a
 desenvolver de maneira rápida e eficaz.
-A camada de controle será desenvolvida com node.js, ele é capaz de
+A camada de controle será desenvolvida com Node.js, ele é capaz de
 interpretar códigos em Java Script para realizar o envio de instruções.
-O banco de dados será o PostgreSQL. E a aplicação será hospedada na
-AWS.
-E como serviço de mensagens, usaremos Twilio.
+O banco de dados será o PostgreSQL, e a aplicação será hospedada na
+AWS. Para serviço de mensagens, usaremos o Twilio.
 
 ## Diagrama de Componentes
-![Diagrama de Componentes](https://raw.githubusercontent.com/enzomazocorodrigues/ppads-2023s1/master/docs/Diagrama%20de%20Componentes.png)
+![Diagrama de Componentes](./Diagrama%20de%20Componentes.png)
 
 ## Diagramas de Sequência
 
-### Caso de Uso: Registrar faltas
+### Caso de Uso: Fazer chamada
 
-![Diagrama de Sequência(Registrar faltas)](https://raw.githubusercontent.com/enzomazocorodrigues/ppads-2023s1/master/docs/Diagrama%20sequencia(Registrar%20Falta).png)
+![Diagrama de Sequência(Registrar faltas)](./Diagrama%20sequencia(Registrar%20Falta).png)
 
-### Caso de Uso: Gerar relatório
+### Caso de Uso: Gerar relatório de faltas
 
-![Diagrama de Sequência(Gerar Relatório)](https://raw.githubusercontent.com/enzomazocorodrigues/ppads-2023s1/master/docs/Diagrama%20sequencia(Gerar%20Relat%C3%B3rio).png)
+![Diagrama de Sequência(Gerar Relatório)](./Diagrama%20sequencia(Gerar%20Relatório).png).png)
 
 # Diagrama de implantação
-![Diagrama de implantação](https://raw.githubusercontent.com/enzomazocorodrigues/ppads-2023s1/master/docs/Diagrama%20de%20Implantacao.png)
+![Diagrama de implantação](./Diagrama%20de%20Implantacao.png)
 
 # Referências
 
