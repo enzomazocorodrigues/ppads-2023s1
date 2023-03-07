@@ -27,6 +27,7 @@ Sistema de presença para Escola do Infinito
   - [Diagramas de Sequência](#diagramas-de-sequência)
     - [Caso de Uso: Fazer chamada](#caso-de-uso-fazer-chamada)
     - [Caso de Uso: Gerar relatório de faltas](#caso-de-uso-gerar-relatório-de-faltas)
+    - [Caso de Uso: Notificar responsável](#caso-de-uso-notificar-responsável)
 - [Diagrama de implantação](#diagrama-de-implantação)
 - [Referências](#referências)
 
@@ -151,7 +152,11 @@ AWS. Para serviço de mensagens, usaremos o Twilio.
 
 ### Caso de Uso: Gerar relatório de faltas
 
-![Diagrama de Sequência(Gerar Relatório)](./Diagrama%20sequencia(Gerar%20Relatório).png).png)
+![Diagrama de Sequência(Gerar Relatório)](./Diagrama%20sequencia(Gerar%20Relat%C3%B3rio).png)
+
+### Caso de Uso: Notificar responsável
+
+![Diagrama de Sequência(Notificar responsável)](./Diagrama%20sequ%C3%AAncia(Notificar%20respons%C3%A1vel).png)
 
 # Diagrama de implantação
 ![Diagrama de implantação](./Diagrama%20de%20Implantacao.png)
