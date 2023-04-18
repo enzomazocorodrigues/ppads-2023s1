@@ -1,0 +1,107 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Aluno {
+  id             Int           @id @default(autoincrement())
+  nome           String        @db.VarChar(100)
+  numeroDeFaltas Int           @default(0) @map("numerodefaltas")
+  idResponsavel  Int           @map("idresponsavel")
+  idTurma        Int           @map("idturma")
+  responsavel    Responsavel   @relation(fields: [idResponsavel], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  turma          Turma         @relation(fields: [idTurma], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  faltas         Falta[]
+  notificacoes   Notificacao[]
+
+  @@map("alunos")
+}
+
+model Chamada {
+  id          Int                 @id @default(autoincrement())
+  data        DateTime            @db.Date
+  idTurma     Int                 @map("idturma")
+  idProfessor Int                 @map("idprofessor")
+  professor   Professor           @relation(fields: [idProfessor], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  turma       Turma               @relation(fields: [idTurma], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  disciplinas ChamadaDisciplina[]
+  faltas      Falta[]
+
+  @@map("chamadas")
+}
+
+model ChamadaDisciplina {
+  idChamada    Int        @map("idchamada")
+  idDisciplina Int        @map("iddisciplina")
+  chamada      Chamada    @relation(fields: [idChamada], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  disciplina   Disciplina @relation(fields: [idDisciplina], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@id([idChamada, idDisciplina], map: "pk_chamdas_disciplinas")
+  @@map("chamadas_disciplinas")
+}
+
+model Disciplina {
+  id            Int                 @id @default(autoincrement())
+  nome          String              @db.VarChar(50)
+  numeroDeAulas Int                 @map("numerodeaulas")
+  chamadas      ChamadaDisciplina[]
+  notificacoes  Notificacao[]
+
+  @@map("disciplinas")
+}
+
+model Falta {
+  idChamada Int     @map("idchamada")
+  idAluno   Int     @map("idaluno")
+  aluno     Aluno   @relation(fields: [idAluno], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  chamada   Chamada @relation(fields: [idChamada], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@id([idChamada, idAluno], map: "pk_faltas")
+  @@map("faltas")
+}
+
+model Notificacao {
+  id           Int        @id @default(autoincrement())
+  data         DateTime   @db.Date
+  email        String     @db.VarChar(80)
+  mensagem     String?
+  idAluno      Int        @map("idaluno")
+  idDisciplina Int        @map("iddisciplina")
+  aluno        Aluno      @relation(fields: [idAluno], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  disciplina   Disciplina @relation(fields: [idDisciplina], references: [id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@map("notificacoes")
+}
+
+model Professor {
+  id       Int       @id @default(autoincrement())
+  nome     String    @db.VarChar(255)
+  email    String    @db.VarChar(80)
+  telefone String?   @db.VarChar(15)
+  chamadas Chamada[]
+
+  @@map("professores")
+}
+
+model Responsavel {
+  id       Int     @id @default(autoincrement())
+  nome     String  @db.VarChar(255)
+  email    String  @db.VarChar(80)
+  telefone String? @db.VarChar(15)
+  alunos   Aluno[]
+
+  @@map("responsaveis")
+}
+
+model Turma {
+  id       Int       @id @default(autoincrement())
+  serie    String    @db.VarChar(10)
+  alunos   Aluno[]
+  chamadas Chamada[]
+
+  @@map("turmas")
+}
