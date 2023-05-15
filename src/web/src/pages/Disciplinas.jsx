@@ -21,7 +21,7 @@ function Disciplinas() {
   })
 
   async function getData() {
-    const response = await fetch(`${baseApiUrl}/disciplinas`)
+    const response = await fetch(`${baseApiUrl}/disciplinas`, { headers })
     const { data } = await response.json()
     return data
   }

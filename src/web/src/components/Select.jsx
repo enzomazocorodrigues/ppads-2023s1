@@ -7,6 +7,7 @@ function Select({ value, onValueChange, items, placeholder }) {
     console.log(value)
     onValueChange(value)
   }
+
   return (
     <SelectRoot.Root value={value} onValueChange={change}>
       <SelectRoot.Trigger className={`${value === null ? 'text-zinc-400' : ''} flex items-baseline justify-between gap-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white`}>
@@ -34,7 +35,7 @@ function Select({ value, onValueChange, items, placeholder }) {
 
 const SelectItem = React.forwardRef(({ children, className, ...props }, forwardedRef) => {
   return (
-    <SelectRoot.Item className={`flex items-center gap-2 px-4 py-2 border-b border-gray-300 bg-white hover:bg-gray-50 focus:bg-gray-100 focus outline-none ring-0 ${className}`} {...props} ref={forwardedRef}>
+    <SelectRoot.Item className={`flex items-center gap-2 px-4 py-2 border-b border-gray-300 bg-white hover:bg-gray-50 focus:bg-gray-100 focus outline-none ring-0 cursor-pointer ${className}`} {...props} ref={forwardedRef}>
       <SelectRoot.ItemText>{children}</SelectRoot.ItemText>
       <SelectRoot.ItemIndicator>
         <Check />

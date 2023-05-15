@@ -23,7 +23,24 @@ router.get('/', async (req, res) => {
   res.json({ data: alunos })
 })
 
-router.get('/responsaveis', async (req, res) => {
+router.get('/options', async (req, res) => {
+  const { idTurma } = req.query
+
+  const alunos = await prisma.aluno.findMany({
+    select: {
+      id: true,
+      nome: true
+    },
+    where: {
+      idTurma: idTurma ? Number(idTurma) : undefined
+    }
+  })
+
+  const alunosOptions = alunos.map(({ id, nome }) => ({ value: id, text: nome }))
+  res.json({ data: alunosOptions })
+})
+
+router.get('/responsaveis/options', async (req, res) => {
   const responsaveis = await prisma.responsavel.findMany({
     select: {
       id: true,
@@ -31,7 +48,8 @@ router.get('/responsaveis', async (req, res) => {
     }
   })
 
-  res.json({ data: responsaveis })
+  const responsaveisOptions = responsaveis.map(({ id, nome }) => ({ value: id, text: nome }))
+  res.json({ data: responsaveisOptions })
 })
 
 router.post('/', async (req, res) => {

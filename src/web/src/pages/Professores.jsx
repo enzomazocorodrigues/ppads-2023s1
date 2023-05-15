@@ -23,7 +23,7 @@ function Professores() {
   })
 
   async function getData() {
-    const response = await fetch(`${baseApiUrl}/professores`)
+    const response = await fetch(`${baseApiUrl}/professores`, { headers })
     const { data } = await response.json()
     return data
   }

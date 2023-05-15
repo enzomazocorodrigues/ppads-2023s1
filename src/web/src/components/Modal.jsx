@@ -15,7 +15,7 @@ function Modal({ show, setShow, title, trigger, children, onConfirm, confirmText
           {children}
           <div className="flex flex-row items-center justify-end gap-6 mt-8">
             <Dialog.Close asChild>
-            <button className="font-medium rounded-lg text-gray-400 hover:text-gray-500 focus:text-gray-500 focus:underline ring-0 outline-none">Cancelar</button>
+              <button className="font-medium rounded-lg text-gray-400 hover:text-gray-500 focus:text-gray-500 focus:underline ring-0 outline-none">Cancelar</button>
             </Dialog.Close>
             <Dialog.Close asChild>
               <button type="button" onClick={onConfirm} className="flex items-center text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-400 font-medium rounded-lg text-sm px-4 py-2 text-center">

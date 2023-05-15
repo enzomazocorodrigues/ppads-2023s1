@@ -8,7 +8,21 @@ router.get('/', async (req, res) => {
     include: { _count: true },
     orderBy: [{ id: 'asc' }]
   })
+
   res.json({ data: turmas })
+})
+
+router.get('/options', async (req, res) => {
+  const turmas = await prisma.turma.findMany({
+    select: {
+      id: true,
+      serie: true
+    },
+    orderBy: [{ id: 'asc' }]
+  })
+
+  const turmasOptions = turmas.map(({ id, serie }) => ({ value: id, text: serie }))
+  res.json({ data: turmasOptions })
 })
 
 router.post('/', async (req, res) => {

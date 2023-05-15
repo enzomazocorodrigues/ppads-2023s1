@@ -7,6 +7,7 @@ import Disciplinas from './pages/Disciplinas';
 import Navbar from './components/Navbar';
 import Turmas from './pages/Turmas';
 import Professores from './pages/Professores';
+import Chamada from './pages/Chamada';
 import Index from './pages/Index';
 
 const router = createBrowserRouter([
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
   { path: "/turmas", element: <Turmas /> },
   { path: "/disciplinas", element: <Disciplinas /> },
   { path: "/professores", element: <Professores /> },
+  { path: "/chamada", element: <Chamada /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -33,20 +33,16 @@ function Alunos() {
   }
 
   async function getResponsaveis() {
-    const response = await fetch(`${baseApiUrl}/alunos/responsaveis`)
+    const response = await fetch(`${baseApiUrl}/alunos/responsaveis/options`)
     const { data } = await response.json()
     return data
   }
 
   async function getTurmas() {
-    const response = await fetch(`${baseApiUrl}/turmas`)
+    const response = await fetch(`${baseApiUrl}/turmas/options`)
     const { data } = await response.json()
     return data
   }
-
-  useEffect(() => {
-    console.log(aluno)
-  }, [aluno])
 
   useEffect(() => {
     Promise.all([
@@ -56,8 +52,8 @@ function Alunos() {
     ])
     .then(([data, turmas, responsaveis]) => {
       setData(data)
-      setTurmas(turmas.map(({ id, serie }) => ({ value: id, text: serie })))
-      setResponsaveis(responsaveis.map(({ id, nome }) => ({ value: id, text: nome })))
+      setTurmas(turmas)
+      setResponsaveis(responsaveis)
     })
   }, [])
 

@@ -20,7 +20,7 @@ function Turmas() {
   })
 
   async function getData() {
-    const response = await fetch(`${baseApiUrl}/turmas`)
+    const response = await fetch(`${baseApiUrl}/turmas`, { headers })
     const { data } = await response.json()
     return data
   }

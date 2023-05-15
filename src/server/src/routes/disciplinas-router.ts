@@ -11,6 +11,19 @@ router.get('/', async (req, res) => {
   res.json({ data: disciplinas })
 })
 
+router.get('/options', async (req, res) => {
+  const disciplinas = await prisma.disciplina.findMany({
+    select: {
+      id: true,
+      nome: true
+    },
+    orderBy: [{ id: 'asc' }]
+  })
+
+  const disciplinasOptions = disciplinas.map(({ id, nome }) => ({ value: id, text: nome }))
+  res.json({ data: disciplinasOptions })
+})
+
 router.post('/', async (req, res) => {
   const { nome, numeroDeAulas } = req.body
 
