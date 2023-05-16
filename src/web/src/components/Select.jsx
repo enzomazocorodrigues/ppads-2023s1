@@ -3,15 +3,10 @@ import * as SelectRoot from '@radix-ui/react-select';
 import { CaretDown, Check } from '@phosphor-icons/react';
 
 function Select({ value, onValueChange, items, placeholder }) {
-  function change(value) {
-    console.log(value)
-    onValueChange(value)
-  }
-
   return (
-    <SelectRoot.Root value={value} onValueChange={change}>
+    <SelectRoot.Root value={value} onValueChange={onValueChange}>
       <SelectRoot.Trigger className={`${value === null ? 'text-zinc-400' : ''} flex items-baseline justify-between gap-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white`}>
-        <SelectRoot.Value />
+        {value === null ? placeholder : <SelectRoot.Value />}
         <SelectRoot.Icon>
           <CaretDown />
         </SelectRoot.Icon>
@@ -19,7 +14,7 @@ function Select({ value, onValueChange, items, placeholder }) {
       <SelectRoot.Portal>
         <SelectRoot.Content position="popper" className="relative translate-y-2 border border-gray-300 w-full rounded-lg bg-white">
           <SelectRoot.Viewport>
-            {[{ value: null, text: placeholder }, ...items]
+            {items
               .map(({ value, text }, i, arr) => (
                 <>
                   <SelectItem className={`${i < arr.length - 1 ? 'border-0': 'rounded-b-lg'} ${i == 0 ? 'rounded-t-lg' : ''}`} value={value} key={value}>{text}</SelectItem>

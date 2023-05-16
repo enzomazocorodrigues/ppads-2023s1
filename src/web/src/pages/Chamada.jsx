@@ -5,17 +5,20 @@ import baseApiUrl from "../utils/base-api-url"
 import headers from "../utils/headers"
 import formatDate from "../utils/fomat-date"
 import Select from "../components/Select"
+import MultipleSelect from "../components/SelectMultiple"
+import SuccessModal from "../components/SuccessModal"
 
 function Chamada() {
   const navigate = useNavigate()
   const [professoresOptions, setProfessoresOptions] = useState([])
   const [idProfessor, setIdProfessor] = useState(null)
   const [disciplinasOptions, setDisciplinasOptions] = useState([])
-  const [idDisciplina, setIdDisciplina] = useState(null)
+  const [idDisciplinas, setIdDisciplinas] = useState([])
   const [turmasOptions, setTurmasOptions] = useState([])
   const [idTurma, setIdTurma] = useState(null)
   const [alunosOptions, setAlunosOptions] = useState([])
   const [idAlunos, setIdAlunos] = useState([])
+  const [showSuccess, setShowSuccess] = useState(false)
   const today = new Date()
 
   async function getProfessoresOptions() {
@@ -52,11 +55,10 @@ function Chamada() {
     } else {
       setIdAlunos(idAlunos.filter(idAlunoAusente => idAlunoAusente != idAluno))
     }
-    console.log("alunos", idAlunos)
   }
 
   function isChamadaValid() {
-    return idProfessor && idDisciplina && idTurma && alunosOptions.length
+    return idProfessor && idDisciplinas.length && idTurma && alunosOptions.length
   }
 
   async function registrarChamada() {
@@ -65,7 +67,7 @@ function Chamada() {
     const chamada = {
       data: today,
       idProfessor,
-      idDisciplina,
+      idDisciplinas,
       idTurma,
       idAlunos
     }
@@ -76,9 +78,8 @@ function Chamada() {
       body: JSON.stringify(chamada)
     })
 
-    navigate('/')
+    setShowSuccess(true)
   }
-
 
   useEffect(() => {
     Promise.all([
@@ -97,7 +98,6 @@ function Chamada() {
     setAlunosOptions([])
     if (idTurma) {
       getAlunosOptions(idTurma).then(setAlunosOptions)
-      console.log(alunosOptions)
     }
   }, [idTurma])
 
@@ -116,12 +116,12 @@ function Chamada() {
             placeholder={'Selecione o professor'}
             onValueChange={(value) => setIdProfessor(value)}
           ></Select>
-          <Select
-            value={idDisciplina}
+          <MultipleSelect
+            value={idDisciplinas}
             items={disciplinasOptions}
             placeholder={'Selecione as disciplinas'}
-            onValueChange={(value) => setIdDisciplina(value)}
-          ></Select>
+            onValueChange={(value) => setIdDisciplinas(value)}
+          ></MultipleSelect>
           <Select
             value={idTurma}
             items={turmasOptions}
@@ -131,7 +131,7 @@ function Chamada() {
         </div>
         <div className="flex gap-6 items-center">
           <a href="/" className="font-medium rounded-lg text-gray-400 hover:text-gray-500 focus:text-gray-500 focus:underline ring-0 outline-none">Cancelar</a>
-          <button type="button" onClick={registrarChamada} className={`flex items-center text-white focus:ring-4 focus:outline-none focus:ring-blue-400 font-medium rounded-lg text-sm px-4 py-2 text-center ${!isChamadaValid() ? 'bg-gray-600' : 'bg-blue-600 hover:bg-blue-700'}`}>
+          <button onClick={registrarChamada} className={`flex items-center text-white focus:ring-4 focus:outline-none focus:ring-blue-400 font-medium rounded-lg text-sm px-4 py-2 text-center ${!isChamadaValid() ? 'bg-gray-600' : 'bg-blue-600 hover:bg-blue-700'}`}>
             Registrar chamada
           </button>
         </div>
@@ -164,6 +164,7 @@ function Chamada() {
             </div>
           )}
       </div>
+      <SuccessModal open={showSuccess} onOpenChange={setShowSuccess} />
     </div>
   )
 }

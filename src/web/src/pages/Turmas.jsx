@@ -36,7 +36,6 @@ function Turmas() {
   }
 
   async function onEdit({ id, serie }) {
-    console.log(id, serie)
     setTurma({ id, serie })
     setIsEdit(true)
     setShowModal(true)
@@ -53,7 +52,6 @@ function Turmas() {
   }
 
   async function onConfirm() {
-    console.log(turma)
     if (isEdit) {
       await fetch(`${baseApiUrl}/turmas/${turma.id}`, {
         method: "PUT",

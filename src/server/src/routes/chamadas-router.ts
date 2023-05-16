@@ -4,20 +4,17 @@ import prisma from "../lib/prisma";
 const router = Router()
 
 router.post('/', async (req, res) => {
-  const { data, idProfessor, /* idDisciplinas, */ idDisciplina, idTurma, idAlunos } = req.body
+  const { data, idProfessor, idDisciplinas, idTurma, idAlunos } = req.body
 
   await prisma.chamada.create({
     data: {
       data,
       idProfessor,
       idTurma,
-      // disciplinas: {
-      //   createMany: {
-      //     data: idDisciplinas.map((idDisciplina: number) => ({ idDisciplina }))
-      //   }
-      // },
       disciplinas: {
-        create: { idDisciplina }
+        createMany: {
+          data: idDisciplinas.map((idDisciplina: number) => ({ idDisciplina }))
+        }
       },
       faltas: {
         createMany: {
