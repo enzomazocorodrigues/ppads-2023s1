@@ -15,7 +15,7 @@ Os arquivos da documentação deste projeto estão na pasta [/docs](/docs), e o 
 
 # Releases
 
-🏷️ [Versão Inicial (v0.0.1)](https://github.com/enzomazocorodrigues/ppads-2023s1/releases/tag/v0.0.1)
-🏷️ [Documentação - Parte I (DOC1)](https://github.com/enzomazocorodrigues/ppads-2023s1/releases/tag/DOC1)
-🏷️ [Entrega 1 (ENTREGA1)](https://github.com/enzomazocorodrigues/ppads-2023s1/releases/tag/ENTREGA1)
-🏷️ [Entrega 2 (ENTREGA2)](https://github.com/enzomazocorodrigues/ppads-2023s1/releases/tag/ENTREGA1)
+- 🏷️ [Versão Inicial (v0.0.1)](https://github.com/enzomazocorodrigues/ppads-2023s1/releases/tag/v0.0.1)
+- 🏷️ [Documentação - Parte I (DOC1)](https://github.com/enzomazocorodrigues/ppads-2023s1/releases/tag/DOC1)
+- 🏷️ [Entrega 1 (ENTREGA1)](https://github.com/enzomazocorodrigues/ppads-2023s1/releases/tag/ENTREGA1)
+- 🏷️ [Entrega 2 (ENTREGA2)](https://github.com/enzomazocorodrigues/ppads-2023s1/releases/tag/ENTREGA1)
