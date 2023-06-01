@@ -5,7 +5,7 @@ import { CaretDown, Check } from '@phosphor-icons/react';
 function Select({ value, onValueChange, items, placeholder }) {
   return (
     <SelectRoot.Root value={value} onValueChange={onValueChange}>
-      <SelectRoot.Trigger className={`${value === null ? 'text-zinc-400' : ''} flex items-baseline justify-between gap-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white`}>
+      <SelectRoot.Trigger className={`${value === null ? 'text-zinc-400' : ''} group flex items-baseline justify-between gap-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white`}>
         {value === null ? placeholder : <SelectRoot.Value />}
         <SelectRoot.Icon>
           <CaretDown />

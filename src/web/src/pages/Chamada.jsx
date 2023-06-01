@@ -131,7 +131,7 @@ function Chamada() {
         </div>
         <div className="flex gap-6 items-center">
           <a href="/" className="font-medium rounded-lg text-gray-400 hover:text-gray-500 focus:text-gray-500 focus:underline ring-0 outline-none">Cancelar</a>
-          <button onClick={registrarChamada} className={`flex items-center text-white focus:ring-4 focus:outline-none focus:ring-blue-400 font-medium rounded-lg text-sm px-4 py-2 text-center ${!isChamadaValid() ? 'bg-gray-600' : 'bg-blue-600 hover:bg-blue-700'}`}>
+          <button onClick={registrarChamada} disabled={!isChamadaValid()} className={`flex items-center text-white focus:ring-4 focus:outline-none focus:ring-blue-400 font-medium rounded-lg text-sm px-4 py-2 text-center ${!isChamadaValid() ? 'bg-gray-600' : 'bg-blue-600 hover:bg-blue-700'}`}>
             Registrar chamada
           </button>
         </div>
